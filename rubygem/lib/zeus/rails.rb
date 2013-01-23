@@ -204,7 +204,7 @@ module Zeus
     private
 
     SPEC_DIR_REGEXP = /^spec/
-    SPEC_FILE_REGEXP = /.+_spec\.rb$/
+    SPEC_FILE_REGEXP = /.+_spec\.rb(:\d+)?$/
     def spec_file? argv
       last_arg = argv[-1]
       last_arg.match (Regexp.union(SPEC_DIR_REGEXP, SPEC_FILE_REGEXP))
